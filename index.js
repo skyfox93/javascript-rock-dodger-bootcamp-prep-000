@@ -90,7 +90,7 @@ function endGame() {
   alert("YOU LOSE!");
 }
 
-function moveDodger(e) {e.preventDefault();e.stopPropagation()
+function moveDodger(e) {e.preventDefault();e.stopPropagation();
 if(e.which==37)
 {moveDodgerLeft();} if(e.which==39){moveDodgerRight();}
   /**
