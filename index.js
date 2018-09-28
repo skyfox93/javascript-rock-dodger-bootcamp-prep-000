@@ -92,7 +92,7 @@ function endGame() {
 
 function moveDodger(e) {
 if(e.which==37)
-{e.preventDefault(); moveDodgerLeft();} if(e.which==39){e.preventDefault(); moveDodgerRight();}
+{moveDodgerLeft();} if(e.which==39){moveDodgerRight();}
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
