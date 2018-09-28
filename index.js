@@ -103,13 +103,21 @@ if(e.which==37)
 }
 
 function moveDodgerLeft() {
-  
+ if(positionToInteger(dodger.style.left)>1) { 
 dodger.style.left=`${positionToInteger(dodger.style.left)-4}px`;
-window.requestAnimationFrame(moveDodgerLeft);
+window.requestAnimationFrame(moveDodgerLeft);}
 }
 
-function moveDodgerRight() {dodger.style.left=`${positionToInteger(dodger.style.left)+4}px`;
-window.requestAnimationFrame(moveDodgerRight);}
+function moveDodgerRight() {
+
+  window.requestAnimationFrame(function(){
+    if (positionToInteger(dodger.style.left)<360){
+      dodger.style.left=`${positionToInteger(dodger.style.left)+4}px`;
+      
+    }
+  });
+
+}
  
 /**
  * @param {string} p The position property
