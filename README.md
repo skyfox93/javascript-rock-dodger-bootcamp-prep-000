@@ -64,7 +64,8 @@ GAME.appendChild(rock);
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
    */
-  function moveRock() {
+
+function moveRock() {
 if(checkCollision(rock)){endGame();}
 if(top>400){GAME.removeChild(rock);ROCKS.shift();}
 else{rock.style.top=`${top +=2}px`;
@@ -83,6 +84,7 @@ moveRock();
  * and removing the `moveDodger` event listener.
  * Finally, alert "YOU LOSE!" to the player.
  */
+
 function endGame() {
   clearInterval(gameInterval);
   for(var i=0;i<ROCKS.length;i++){GAME.removeChild(ROCKS[i]);}
