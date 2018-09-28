@@ -63,9 +63,9 @@ GAME.appendChild(rock);
   /**
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
-   */
+   */**
 
-function moveRock() {
+  function moveRock() {
 if(checkCollision(rock)){endGame();}
 if(top>400){GAME.removeChild(rock);ROCKS.shift();}
 else{rock.style.top=`${top +=2}px`;
@@ -84,7 +84,6 @@ moveRock();
  * and removing the `moveDodger` event listener.
  * Finally, alert "YOU LOSE!" to the player.
  */
-
 function endGame() {
   clearInterval(gameInterval);
   for(var i=0;i<ROCKS.length;i++){GAME.removeChild(ROCKS[i]);}
@@ -94,8 +93,15 @@ function endGame() {
 
 function moveDodger(e) {
 if(e.which==37)
-{moveDodgerLeft();} if(e.which==39){moveDodgerRight();}}
- 
+{moveDodgerLeft();} if(e.which==39){moveDodgerRight();}
+  /**
+   * This function should call `moveDodgerLeft()`
+   * if the left arrow is pressed and `moveDodgerRight()`
+   * if the right arrow is pressed. (Check the constants
+   * we've declared for you above.)
+   * And be sure to use the functions declared below!
+   */
+}
 
 function moveDodgerLeft() {
   
